@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="contain">
+            <h1>Lucky Restaurant</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to Lucky Restaurant</h2>
+            <p>Your perfect spot for mouth-watering dishes and an unforgettable dining experience.</p>
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <h3>Pizza Margherita</h3>
+                <p>A classic Italian pizza topped with fresh tomatoes, mozzarella, and basil.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Grilled Steak</h3>
+                <p>Juicy and tender steak grilled to perfection with a side of vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Delicious warm chocolate cake with a molten center, served with ice cream.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Lucky Restaurant, we believe that food should not only satisfy hunger but also create memories.<br>
+We use the freshest ingredients to prepare authentic and innovative dishes. Visit us for an exceptional dining experience!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Batla house, Okhla, New Delhi</p>
+            <p>Email: <a href="luckyrestaurant123@.com">luckyrestaurant123@.com</a></p>
+            <p>Phone: 91 1234567891</p>
+            <a href="luckyrestaurant123@.com" class="btn">Make a Reservation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Delicious Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+</html>
+
+
+//CSS
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.contain {
+    color: #f4eeee;
+    background-color: #333;
+    width: 80%;
+    margin: auto;
+    
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    background: url('https://images.unsplash.com/photo-1565895405135-b12ef828c5c9') no-repeat center center/cover;
+    color: #1c1a1a;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h2 {
+    font-size: 4em;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #E74C3C;
+    color: #f9f2f2f3;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #C0392B;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#menu {
+    color: #fff;
+    background: #302d2d;
+}
+
+.menu-item {
+    margin-bottom: 40px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
