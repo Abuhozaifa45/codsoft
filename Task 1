@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="inputbox">
+        <div>
+            <button>AC</button>
+            <button>DEL</button>
+            <button>%</button>
+            <button>/</button>
+        </div>
+        <div>
+            <button>9</button>
+            <button>8</button>
+            <button>7</button>
+            <button>*</button>
+        </div>
+        <div>
+            <button>6</button>
+            <button>5</button>
+            <button>4</button>
+            <button>-</button>
+        </div>
+        <div>
+            <button>3</button>
+            <button>2</button>
+            <button>1</button>
+            <button>+</button>
+        </div>
+        <div>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equal">=</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
+
+
+
+//CSS code
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255, 127, 138);
+
+}
+.calculator{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 16px;
+    background-color:transparent;
+    box-shadow: 0px 3px 15px rgb(red, green, rgb(20, 2, 43, 0.5));
+}
+input{
+    width: 320px;
+    padding: 20px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgb(red, green, rgb(20, 2, 43, 0.5));
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+
+}
+input::placeholder{
+   color: white;
+}
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.equal{
+    color:aliceblue;
+    background-color: black;
+}
+
+
+
+//javascript
+
+let input = document.getElementById('inputbox');
+let button = document.querySelectorAll('button');
+let string = "";
+let arr = Array.from(button);
+arr.forEach(button => {
+    button.addEventListener('click', (e) => {
+        if (e.target.innerHTML == '=') {
+            string = eval(string);
+            input.value = string;
+        }
+        else if (e.target.innerHTML == 'AC') {
+            string = "";
+            input.value = string;
+        }
+        else if (e.target.innerHTML == 'DEL'){
+            string = string.substring(0, string.length-1);
+            input.value = string;
+
+        }
+        else {
+            string += e.target.innerHTML;
+            input.value = string;
+        }
+    })
+})
